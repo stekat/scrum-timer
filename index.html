@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrum Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>  
+      <div class="settings-button">
+        <i class="fa fa-cog fa-2x" aria-hidden="true" onclick="ShowModal()"></i>
+      </div>
+      <h1>Scrum Timer</h1>
+    </header>
+    <main>
+      <p id="timer" class="timer">15:00</p>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="settings">
+            <p>Dauer</p>
+            <input type="range" min="0" max="120" step="1" value="15" id="rangeMinutes" oninput="UpdateTimeRange()">
+            <p id="slider-minutes">15:00 min</p>
+          </div>
+          <div class="settings">
+            <p>T&ouml;ne</p>
+            <label><input type="checkbox" id="checkbox-sound" checked></label>
+            abspielen
+          </div>
+          <div class="modal-footer">
+            <div class="settings-close-button" onclick="CloseSettings()">Schlie&szlig;en</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="start-button" onclick="StartTimer()">Start</div>
+        <div class="stop-button" onclick="StopTimer()">Stopp</div>
+        <div class="reset-button" onclick="ResetTimer()">Reset</div>
+      </div>
+    </main>
+  </body>
+</html>
